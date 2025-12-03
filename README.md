@@ -1,6 +1,6 @@
 # Banking Application in Java
 
-A simple console-based **Banking Application** implemented in Java that allows users to create and manage **Savings** and **Checking** accounts. This project demonstrates fundamental **Object-Oriented Programming (OOP)** concepts such as **inheritance**, **polymorphism**, and **encapsulation**.
+A simple console-based **Banking Application** implemented in Java that allows users to create and manage **Savings** and **Checking** accounts. This project demonstrates fundamental **Object-Oriented Programming (OOP)** concepts such as **inheritance** and **encapsulation**.
 
 ---
 
