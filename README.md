@@ -15,13 +15,12 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts such as:
 
 ## 📁 Project Structure
 
+```text
 📦 Bank Account Simulation/
-│
 ├── 📁 Account/
 │   ├── 📄 Account.java
 │   ├── 📄 CheckingAccount.java
 │   └── 📄 SavingsAccount.java
-│
 ├── 📄 Main.java
 ├── 📝 README.md
 └── 📄 .gitignore
