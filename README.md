@@ -1,21 +1,24 @@
 # Banking Application in Java
 
-A simple, console-based **Banking Application** built using Java and organized with proper **package structure**.  
-This program enables users to create and manage **Savings** and **Checking** accounts through a clean, menu-driven interface.  
-It demonstrates core **Object-Oriented Programming (OOP)** concepts such as:
+A simple, console-based **Banking Application** built using Java and organized with proper **package structure**.
+This program enables users to create and manage **Savings** and **Checking** accounts through a clean, menu-driven interface.
+It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 
-- Classes & Objects  
-- Inheritance  
-- Encapsulation  
-- Method Overriding  
-- Polymorphism (via array of Account references)
-- Packages
+---
+
+## 📘 OOP Concepts Used
+
+- **Encapsulation:** Private fields accessed via public getters/setters.
+- **Inheritance:** `SavingsAccount` and `CheckingAccount` classes **extend** the `Account` base class.
+- **Polymorphism:** An array of `Account` references is used to store and manage both account types.
+- **Method Overriding:** The `SavingsAccount` class **overrides** the base `withdraw()` method to enforce specific rules.
+- **Packages:** Classes are organized into the `Account` package.
 
 ---
 
 ## 📁 Project Structure
 
-```text
+```
 📦 Bank Account Simulation/
 ├── 📁 Account/
 │   ├── 📄 Account.java
@@ -25,7 +28,6 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts such as:
 ├── 📝 README.md
 └── 📄 .gitignore
 ```
-
 ---
 
 ### 🔸 Package: `Account`
@@ -67,18 +69,9 @@ Contains all account-related classes.
 
 ---
 
-## 📘 OOP Concepts Used
-
-- **Encapsulation:** private fields with getters/setters  
-- **Inheritance:** SavingsAccount & CheckingAccount extend Account  
-- **Polymorphism:** array of `Account` storing both account types  
-- **Method Overriding:** SavingsAccount overrides `withdraw()`  
-
----
-
 ## ▶ Example Console Output
 
-```text
+```
 Welcome to the Banking Application!
 
 Menu:
@@ -92,7 +85,6 @@ Menu:
 
 Choose an option: 
 ```
-
 ---
 
 ## 👤 Author
