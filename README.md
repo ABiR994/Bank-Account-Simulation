@@ -18,16 +18,19 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 
 ## 📁 Project Structure
 
-```
-📦 Bank Account Simulation/
-├── 📁 Account/
-│   ├── 📄 Account.java
-│   ├── 📄 CheckingAccount.java
-│   └── 📄 SavingsAccount.java
-├── 📄 Main.java
-├── 📝 README.md
-└── 📄 .gitignore
-```
+┌──────────────────────────────────────────────┐
+│           📦 Bank Account Simulation          │
+├──────────────────────────────────────────────┤
+│  📁 Account/                                  │
+│     ├── Account.java                          │
+│     ├── CheckingAccount.java                  │
+│     └── SavingsAccount.java                   │
+│                                              │
+│  📄 Main.java                                 │
+│  📝 README.md                                 │
+│  📄 .gitignore                                │
+└──────────────────────────────────────────────┘
+
 ---
 
 ### 🔸 Package: `Account`
@@ -71,7 +74,6 @@ Contains all account-related classes.
 
 ## ▶ Example Console Output
 
-```
 Welcome to the Banking Application!
 
 Menu:
@@ -83,8 +85,8 @@ Menu:
 6. Show All Accounts
 7. Exit
 
-Choose an option: 
-```
+Choose an option:
+
 ---
 
 ## 👤 Author
