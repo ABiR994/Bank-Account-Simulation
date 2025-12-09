@@ -18,9 +18,9 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts such as:
 Bank Account Simulation/
 │
 ├── Account/
-│ ├── Account.java
-│ ├── CheckingAccount.java
-│ └── SavingsAccount.java
+│   ├── Account.java
+│   ├── CheckingAccount.java
+│   └── SavingsAccount.java
 │
 ├── Main.java
 ├── README.md
