@@ -17,7 +17,7 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 ---
 
 ## 📁 Project Structure
-
+```
 📦 Bank Account Simulation/
 │
 ├── 📁 Account/
@@ -28,7 +28,7 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 ├── 📄 Main.java
 ├── 📝 README.md
 └── 📄 .gitignore
-
+```
 ---
 
 ### 🔸 Package: `Account`
