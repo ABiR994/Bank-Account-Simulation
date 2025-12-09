@@ -1,21 +1,23 @@
+package Account;
+
 public class Account {
-    private int accountNumber;
+    private String accountNumber;
     private String accountHolderName;
     private double balance;
 
-    Account() {
-        this.accountNumber = 0;
+    public Account() {
+        this.accountNumber = "";
         this.accountHolderName = "";
         this.balance = 0.0;
     }
 
-    Account(int accountNumber, String accountHolderName, double balance) {
+    public Account(String accountNumber, String accountHolderName, double balance) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber =accountNumber;
     }
 
@@ -27,7 +29,7 @@ public class Account {
         this.balance = balance;
     }
 
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 

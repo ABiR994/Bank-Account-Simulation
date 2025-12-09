@@ -1,11 +1,13 @@
+package Account;
+
 public class SavingsAccount extends Account {
     private static final double minimumBalance = 500.0;
 
-    SavingsAccount() {
+    public SavingsAccount() {
         super();
     }
 
-    SavingsAccount(int accountNumber, String accountHolderName, double balance) {
+    public SavingsAccount(String accountNumber, String accountHolderName, double balance) {
         super(accountNumber, accountHolderName, balance);
     }
 

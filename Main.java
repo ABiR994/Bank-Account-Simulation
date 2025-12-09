@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import Account.*;
 public class Main {
     static Scanner sc = new Scanner(System.in);
     static Account[] accounts = new Account[100];
@@ -17,6 +18,7 @@ public class Main {
             System.out.println("7. Exit");
             System.out.print("\nChoose an option: ");
             int choice = sc.nextInt();
+            sc.nextLine();
             switch(choice) {
                 case 1:
                     createSavingsAccount();
@@ -48,12 +50,12 @@ public class Main {
     static void createSavingsAccount() {
         System.out.println("\nCreating a Savings Account:");
         System.out.print("Enter Account Number: ");
-        int accNum = sc.nextInt();
-        sc.nextLine();
+        String accNum = sc.nextLine();
         System.out.print("Enter Account Holder Name: ");
         String accHolder = sc.nextLine();
         System.out.print("Enter Initial Balance: ");
         double balance = sc.nextDouble();
+        sc.nextLine();
         accounts[count] = new SavingsAccount(accNum, accHolder, balance);
         count++;
         System.out.println("\nSavings Account created successfully!");
@@ -62,20 +64,20 @@ public class Main {
     static void createCheckingAccount() {
         System.out.println("\nCreating a Checking Account:");
         System.out.print("Enter Account Number: ");
-        int accNum = sc.nextInt();
-        sc.nextLine();
+        String accNum = sc.nextLine();
         System.out.print("Enter Account Holder Name: ");
         String accHolder = sc.nextLine();
         System.out.print("Enter Initial Balance: ");
         double balance = sc.nextDouble();
+        sc.nextLine();
         accounts[count] = new CheckingAccount(accNum, accHolder, balance);
         count++;
         System.out.println("\nChecking Account created successfully!");
     }
 
-    static int findAccountIndex(int accountNumber) {
+    static int findAccountIndex(String accountNumber) {
         for(int i = 0; i < count; i++) {
-            if(accounts[i].getAccountNumber() == accountNumber) {
+            if(accounts[i].getAccountNumber().equalsIgnoreCase(accountNumber)) {
                 return i;
             }
         }
@@ -85,11 +87,12 @@ public class Main {
     static void deposit() {
         System.out.println("\nDeposit:");
         System.out.print("Enter Account Number: ");
-        int accNum = sc.nextInt();
+        String accNum = sc.nextLine();
         int index = findAccountIndex(accNum);
         if(index != -1) {
             System.out.print("Enter Deposit Amount: ");
             double amount = sc.nextDouble();
+            sc.nextLine();
             accounts[index].deposit(amount);
             System.out.println("\nDeposit successful!");
             System.out.println("\nUpdated Balance: " + accounts[index].getBalance());
@@ -101,11 +104,12 @@ public class Main {
     static void withdraw() {
         System.out.println("\nWithdraw:");
         System.out.print("Enter Account Number: ");
-        int accNum = sc.nextInt();
+        String accNum = sc.nextLine();
         int index = findAccountIndex(accNum);
         if(index != -1) {
             System.out.print("Enter Withdrawal Amount: ");
             double amount = sc.nextDouble();
+            sc.nextLine();
             accounts[index].withdraw(amount);
         } else {
             System.out.println("\nAccount not found.");
@@ -115,7 +119,7 @@ public class Main {
     static void displayAccountInfo() {
         System.out.println("\nDisplay Account Info:");
         System.out.print("Enter Account Number: ");
-        int accNum = sc.nextInt();
+        String accNum = sc.nextLine();
         int index = findAccountIndex(accNum);
         if(index != -1) {
             accounts[index].displayInfo();

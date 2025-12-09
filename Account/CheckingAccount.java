@@ -1,9 +1,11 @@
+package Account;
+
 public class CheckingAccount extends Account {
-    CheckingAccount() {
+    public CheckingAccount() {
         super();
     }
 
-    CheckingAccount(int accountNumber, String accountHolderName, double balance) {
+    public CheckingAccount(String accountNumber, String accountHolderName, double balance) {
         super(accountNumber, accountHolderName, balance);
     }
 
