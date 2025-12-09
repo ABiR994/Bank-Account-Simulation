@@ -24,6 +24,7 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts such as:
 ├── 📄 Main.java
 ├── 📝 README.md
 └── 📄 .gitignore
+```
 
 ---
 
@@ -77,6 +78,7 @@ Contains all account-related classes.
 
 ## ▶ Example Console Output
 
+```text
 Welcome to the Banking Application!
 
 Menu:
@@ -89,6 +91,7 @@ Menu:
 7. Exit
 
 Choose an option: 
+```
 
 ---
 
