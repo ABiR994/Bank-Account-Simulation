@@ -119,6 +119,25 @@ Handles user interaction.
 
 ---
 
+## ▶️ How to Run
+
+1. **Clone the repository** or download the project to your local machine.  
+
+2. **Open a terminal** in the project root directory.  
+
+3. **Compile all Java files**:
+
+```bash
+javac Main.java account/*.java services/*.java ui/*.java
+```
+> This compiles all classes and keeps the package structure intact.
+
+4. Run the program:
+```bash
+java Main
+```
+---
+
 ## ▶ Sample Console Output
 ```
 Welcome to the Banking Application!
@@ -146,4 +165,5 @@ Enter your choice:
 CSE Student at AIUB
 
 ---
+
 
