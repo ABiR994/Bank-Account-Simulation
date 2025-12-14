@@ -136,7 +136,7 @@ Enter your choice:
 
 ## 📊 UML Diagram
 
-![UML Diagram](Assets/uml.png)
+![UML Diagram](assets/uml.png)
 
 ---
 
@@ -146,3 +146,4 @@ Enter your choice:
 CSE Student at AIUB
 
 ---
+
