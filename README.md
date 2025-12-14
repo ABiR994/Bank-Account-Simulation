@@ -1,18 +1,29 @@
-# Banking Application in Java
+# 🏦 Banking Application in Java
 
-A simple, console-based **Banking Application** built using Java and organized with proper **package structure**.
-This program enables users to create and manage **Savings** and **Checking** accounts through a clean, menu-driven interface.
-It demonstrates core **Object-Oriented Programming (OOP)** concepts.
+A **console-based Banking Application** built using Java, following a **layered package structure** and core **Object-Oriented Programming (OOP)** principles.  
+The application allows users to create and manage **Savings** and **Checking** accounts through a clean, menu-driven interface.
 
 ---
 
 ## 📘 OOP Concepts Used
 
-- **Encapsulation:** Private fields accessed via public getters/setters.
-- **Inheritance:** `SavingsAccount` and `CheckingAccount` classes **extend** the `Account` base class.
-- **Polymorphism:** An array of `Account` references is used to store and manage both account types.
-- **Method Overriding:** The `SavingsAccount` class **overrides** the base `withdraw()` method to enforce specific rules.
-- **Packages:** Classes are organized into the `Account` package.
+- **Encapsulation**  
+  Private fields with controlled access via getters and setters.
+
+- **Inheritance**  
+  `SavingsAccount` and `CheckingAccount` extend the abstract `Account` class.
+
+- **Polymorphism**  
+  Accounts are stored using an `Account[]` reference, allowing different account types to be managed uniformly.
+
+- **Method Overriding**  
+  `SavingsAccount` overrides `withdraw()` to enforce minimum balance rules.
+
+- **Abstraction**  
+  `Account` is an abstract base class defining common behavior.
+
+- **Separation of Concerns**  
+  Logic is divided into `account`, `services`, and `ui` packages.
 
 ---
 
@@ -20,10 +31,19 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 ```
 📦 Bank Account Simulation/
 │
-├── 📁 Account/
+├── 📁 account/
 │   ├── 📄 Account.java
 │   ├── 📄 CheckingAccount.java
 │   └── 📄 SavingsAccount.java
+│
+├── 📁 services/
+│   ├── 📄 AccountCreation.java
+│   ├── 📄 FindAccount.java
+│   └── 📄 Transaction.java
+│
+├── 📁 ui/
+│   ├── 📄 InputHandler.java
+│   └── 📄 Menu.java
 │
 ├── 📄 Main.java
 ├── 📝 README.md
@@ -31,59 +51,92 @@ It demonstrates core **Object-Oriented Programming (OOP)** concepts.
 ```
 ---
 
-### 🔸 Package: `Account`
+---
+
+## 📦 Package Overview
+
+### 🔹 account
 Contains all account-related classes.
 
 - **Account.java**  
-  Base class with shared attributes and methods.
+  Abstract base class defining shared fields and operations.
 
 - **CheckingAccount.java**  
-  Extends `Account` and represents a basic checking account.
+  A standard account with no minimum balance restriction.
 
 - **SavingsAccount.java**  
-  Extends `Account` and enforces a **minimum balance of 500** during withdrawals.
+  Enforces a **minimum balance of 500** during withdrawals.
+
+---
+
+### 🔹 services
+Handles core business logic.
+
+- **AccountCreation.java**  
+  Creates and stores accounts using a centralized account array.
+
+- **FindAccount.java**  
+  Searches and displays account information.
+
+- **Transaction.java**  
+  Manages deposits and withdrawals.
+
+---
+
+### 🔹 ui
+Handles user interaction.
+
+- **Menu.java**  
+  Displays main and account-type menus.
+
+- **InputHandler.java**  
+  Validates and processes user input safely.
 
 ---
 
 ## 🏦 Account Types
 
-### 🔹 **Savings Account**
-- Requires **minimum balance of 500**
-- Withdrawal is blocked if it reduces balance below minimum
-- Uses overridden `withdraw()` method
+### 🔸 Savings Account
+- Requires a **minimum balance of 500**
+- Withdrawals are blocked if the balance would fall below the minimum
+- Uses an overridden `withdraw()` method
 
-### 🔹 **Checking Account**
+### 🔸 Checking Account
 - No minimum balance requirement
-- Fully inherits base `Account` behavior
+- Inherits base account behavior
 
 ---
 
 ## ✨ Features
 
-- Create **Savings** or **Checking** accounts
-- Supports **String-based account numbers** (e.g., “19001”, “ACC-55”, “A001”)
-- Deposit money into selected accounts
-- Withdraw money (with validation)
-- Display specific account information
-- Display **all accounts** using polymorphism
-- Clean, user-friendly console interactions
+- Create **Savings** and **Checking** accounts
+- Supports **string-based account numbers** (e.g., `A001`, `ACC-55`)
+- Deposit and withdraw funds with validation
+- Display individual account details
+- Display all accounts using polymorphism
+- Menu-driven, user-friendly console interface
+- Clean separation between UI, services, and data models
 
 ---
 
-## ▶ Example Console Output
-
+## ▶ Sample Console Output
+```
 Welcome to the Banking Application!
 
 Menu:
-1. Create Savings Account
-2. Create Checking Account
-3. Deposit
-4. Withdraw
-5. Display Account Info
-6. Show All Accounts
-7. Exit
+1 Create Account
+2 Deposit
+3 Withdraw
+4 Display Account Info
+5 Show All Accounts
 
-Choose an option:
+Enter your choice:
+```
+---
+
+## 📊 UML Diagram
+
+![UML Diagram](Assets/uml.png)
 
 ---
 
@@ -93,4 +146,3 @@ Choose an option:
 CSE Student at AIUB
 
 ---
-
