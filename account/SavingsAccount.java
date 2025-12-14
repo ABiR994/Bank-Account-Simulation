@@ -12,8 +12,8 @@ public class SavingsAccount extends Account {
     }
 
     public void withdraw(double amount) {
-        double balance = getBalance() - amount;
         if(amount >= 0 && amount <= (getBalance() - minimumBalance)) {
+            double balance = getBalance() - amount;
             setBalance(balance);
             System.out.println("\nWithdrawal successful!");
             System.out.println("\nUpdated Balance: " + getBalance());

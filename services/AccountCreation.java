@@ -3,7 +3,7 @@ import account.*;
 import ui.*;
 
 public class AccountCreation {
-    public static Account[] accounts = new Account[100];
+    private static Account[] accounts = new Account[100];
     private static int count = 0;
     public static void createAccount() {
         while(true) {
@@ -38,6 +38,10 @@ public class AccountCreation {
         accounts[count] = new CheckingAccount(accNum, accHolder, accBalance);
         count++;
         System.out.println("\nChecking Account created successfully!");
+    }
+
+    public static Account getAccount(int index) {
+        return accounts[index];
     }
 
     public static int getCount() {

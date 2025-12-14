@@ -4,7 +4,7 @@ import ui.*;
 public class FindAccount {
     public static int findAccountIndex(String accountNumber) {
         for(int i = 0; i < AccountCreation.getCount(); i++) {
-            if(AccountCreation.accounts[i].getAccountNumber().equalsIgnoreCase(accountNumber)) {
+            if(AccountCreation.getAccount(i).getAccountNumber().equalsIgnoreCase(accountNumber)) {
                 return i;
             }
         }
@@ -17,7 +17,7 @@ public class FindAccount {
             String accNum = InputHandler.accNum();
             int index = findAccountIndex(accNum);
             if(index != -1) {
-                AccountCreation.accounts[index].displayInfo();
+                AccountCreation.getAccount(index).displayInfo();
             } else {
                 System.out.println("\nAccount not found.");
             }
@@ -30,7 +30,7 @@ public class FindAccount {
         if(AccountCreation.getCount() != 0) {
             System.out.println("\n=====Accounts List=====");
             for(int i = 0; i < AccountCreation.getCount(); i++) {
-                AccountCreation.accounts[i].displayInfo();
+                AccountCreation.getAccount(i).displayInfo();
             }
         } else {
             System.out.println("\nNo Accounts Registered.");

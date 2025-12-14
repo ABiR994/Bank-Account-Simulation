@@ -9,7 +9,7 @@ public class Transaction {
             int index = FindAccount.findAccountIndex(accNum);
             if(index != -1) {
                 double amount = InputHandler.amount();
-                AccountCreation.accounts[index].deposit(amount);
+                AccountCreation.getAccount(index).deposit(amount);
             } else {
                 System.out.println("\nAccount not found.");
             }
@@ -20,12 +20,12 @@ public class Transaction {
 
     public static void withdraw() {
         if(AccountCreation.getCount() != 0) {
-            System.out.println("\nDeposit:");
+            System.out.println("\nWithdraw:");
             String accNum = InputHandler.accNum();
             int index = FindAccount.findAccountIndex(accNum);
             if(index != -1) {
                 double amount = InputHandler.amount();
-                AccountCreation.accounts[index].withdraw(amount);
+                AccountCreation.getAccount(index).withdraw(amount);
             } else {
                 System.out.println("\nAccount not found.");
             }
