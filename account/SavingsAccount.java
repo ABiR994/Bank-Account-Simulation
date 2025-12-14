@@ -1,4 +1,4 @@
-package Account;
+package account;
 
 public class SavingsAccount extends Account {
     private static final double minimumBalance = 500.0;
@@ -13,9 +13,7 @@ public class SavingsAccount extends Account {
 
     public void withdraw(double amount) {
         double balance = getBalance() - amount;
-        if(amount < 0) {
-            System.out.println("Invalid withdrawal amount.");
-        } else if(amount >= 0 && amount <= (getBalance() - minimumBalance)) {
+        if(amount >= 0 && amount <= (getBalance() - minimumBalance)) {
             setBalance(balance);
             System.out.println("\nWithdrawal successful!");
             System.out.println("\nUpdated Balance: " + getBalance());

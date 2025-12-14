@@ -1,6 +1,6 @@
-package Account;
+package account;
 
-public class Account {
+public abstract class Account {
     private String accountNumber;
     private String accountHolderName;
     private double balance;
@@ -44,6 +44,8 @@ public class Account {
     public void deposit(double amount) {
         if (amount >= 0) {
             balance += amount;
+            System.out.println("\nDeposit successful!");
+            System.out.println("\nUpdated Balance: " + balance);
         } else {
             System.out.println("Invalid deposit amount.");
         }
@@ -55,7 +57,7 @@ public class Account {
             System.out.println("\nWithdrawal successful!");
             System.out.println("\nUpdated Balance: " + balance);
         } else {
-            System.out.println("Invalid withdrawal amount.");
+            System.out.println("Insufficient funds.");
         }
     }
 
